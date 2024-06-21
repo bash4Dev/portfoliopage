@@ -45,14 +45,25 @@ header .page-title {
     margin-left: 2rem;
 }
 
-header #navbar a {
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     margin-right: 2rem;
     letter-spacing: 0.1rem;
     color: var(--white-color);
+    cursor: pointer;
+    transition: .3s;
 }
+
+.stage:hover .ball {
+    animation: slide 2s linear;
+  }
 
 main #welcome-section {
     width: 100%;
