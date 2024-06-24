@@ -7,7 +7,6 @@
     );
     --white-color: rgb(100%, 100%, 100%);
     --header-font: "Libre Baskerville", serif;
-    --poiret-one: "Poiret One", sans-serif;
     --texts-font: "Quicksand", sans-serif;
 }
 
@@ -39,7 +38,7 @@ header {
 }
 
 header .page-title { 
-    font-family: "Langar", system-ui;  
+    font-family: var(--header-font);  
     font-size: 2rem;
     font-style: italic;
     margin-left: 2rem;
@@ -103,10 +102,9 @@ main #welcome-section {
 }
 
 #welcome-section p, #contact-section p {
-    color: var(--white-color);
+    color: rgb(199, 16, 101);
     font-size: 1.3rem;
-    font-family: var(--poiret-one);
-    opacity: 50%;
+    font-family: var(--texts-font);
     text-align: center;
 }
 
@@ -154,6 +152,8 @@ section .project img {
 #projects-section .project .project-title {
     background-color: var(--body-color);
     color: var(--white-color);
+    /* font-weight: bold; */
+    font-size: 18px;
 }
 
 #projects-section a {  
