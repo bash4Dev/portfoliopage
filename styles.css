@@ -18,23 +18,22 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     background-color: var(--body-color);
+    font-weight: 100;
     overflow-x: hidden;
     color: var(--white-color);
     font-family: var(--texts-font);
 }
 
 header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     background: var(--header-bg);
     position: fixed;
     z-index: 1;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.6rem;
 }
 
 header .page-title { 
@@ -45,13 +44,12 @@ header .page-title {
 
 header #navbar {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 header #navbar a {
     text-decoration: none;
     font-size: 16px;
-    font-weight: 100;
     letter-spacing: 0.1rem;
     color: var(--white-color);
     cursor: pointer;
@@ -104,25 +102,25 @@ main #welcome-section {
 main #projects-section { 
     display: grid;
     place-items: center;
-    width: 100%;
     background: var(--header-bg);
-    padding: 0rem 2rem 3rem 1rem;
+}
+
+#projects-section h3 {
+    font-size: 1.8rem;
+    font-family: var(--header-font);
+    padding: 1.3rem 0;
 }
 
 #projects-section #projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 1.6rem;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
 }
 
 #projects-section .project {
     border-radius: 8px 8px 0 0;
-}
-
-#projects-section .heading {
-    grid-column: 2 / -1;
-    line-height: 3rem;
-    padding: 1rem 0;
 }
 
 section .project img {
@@ -132,27 +130,11 @@ section .project img {
 }
 
 #projects-section .project .project-title {
-    background: var(--body-color);
-    padding: 14px;
-    margin-top: -0.4rem;
-}
-
-#projects-section h2 {
-    font-family: var(--header-font);
-    font-size: 2rem;
-}
-
-/* #projects-section .short.border {
-    position: relative;
-    right: 0%;
-    width: 32em;
-    border: 1px solid rgb(240, 144, 144);
-} */
-
-#projects-section .project .project-title {
     background-color: var(--body-color);
     color: var(--white-color);
-    font-size: 18px;
+    font-size: 1rem;
+    padding: 13px;
+    /* margin-top: -0.4rem; */
 }
 
 #projects-section a {  
@@ -162,25 +144,26 @@ section .project img {
 
 main #contact-section {
     width: 100%;
-    height: 80vh;
+    height: 74vh;
     display: grid;
     place-content: center;
     gap: 3rem;
 }
 
-#contact-section h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
+#contact-section h2 {
+    font-size: 2.3rem;
     letter-spacing: 0.1rem;
     font-family: var(--header-font);
     text-align: center;
+    margin-bottom: 5px;
 }
 
 #contact-section .social-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 3rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .social-links a {
@@ -207,31 +190,22 @@ footer {
     align-items: center;
 }
 
-@media (max-width: 800px) {
-    header {
-        padding: 0.5rem;
-    }
-    
-    header .page-title {   
+@media (max-width: 777px) {
+    header .page-title {  
         font-size: 1.8rem;
-        margin-left: 1rem;
-    }
-    
-    header ul a {
-        font-size: 14px;
-        font-weight: 600;
-        margin-right: 0;
-        padding-right: 20px;
     }
 
-    main #welcome-section {
-        gap: 1rem;
-        line-height: 2rem;
+    header #navbar {
+        gap: 0.6rem;
     }
     
+    header #navbar a {
+        font-size: 15px;
+    }
+
     #welcome-section .my-img {
-        width: 240px;
-        height: 240px;
+        width: 250px;
+        height: 250px;
     }
 
     #welcome-section h1 {
@@ -242,93 +216,130 @@ footer {
         font-size: 1.2rem;
     }
 
-    main #projects-section {  
-        gap: 1.3rem;
-        padding: 0rem 1rem 3rem 1rem;
+    #projects-section h3 {
+        font-size: 1.4rem;
+    }
+
+    #projects-section #projects {
+        gap: 0.8rem;
     }
 
     section .project img {
-        width: 100%;
-        min-height: 60vh;
-        border-radius: 8px 8px 0 0;
+        min-height: 50vh;
     }
-    
+
     #projects-section .project .project-title {
-        background: var(--body-color);
-        padding: 14px;
-        margin-top: -0.4rem;
+        background-color: var(--body-color);
+        color: var(--white-color);
+        font-size: 0.8rem;
+        padding: 12px;
+        /* margin-top: -0.4rem; */
     }
     
-    #projects-section h2 {
-        font-size: 1rem;
+    #contact-section h2 {
+        font-size: 2rem;
     }
 }
 
-@media (max-width: 425px) {
-    header {
-        padding: 0;
-    }
-
-    header .page-title {  
-        font-size: 1.7rem;
-        margin-left: 0;
-    }
-
-    #navbar ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    header ul a {
-        margin-right: 0;
-    }
-
-    header ul li {
-        font-size: 13px;
-        font-weight: 100;
-        padding-right: 0;
-    }
-
-    main #welcome-section {
-        flex-direction: column;
-    }
-
+@media (max-width: 600px) {
     #welcome-section .my-img {
         width: 230px;
         height: 230px;
     }
 
     #welcome-section h1 {
-        font-size: 2rem;
-        letter-spacing: 0.1rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        padding: 0.8rem 1rem;
+    }
+
+    header .page-title {  
+        font-size: 1.6rem;
+    }
+
+    header #navbar {
+        gap: 0.5rem;
+    }
+    
+    header #navbar a {
+        font-size: 14px;
+        letter-spacing: 0rem;
+    }
+
+    main #welcome-section {
+        flex-direction: column;
     }
     
     #welcome-section p, #contact-section p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     main #projects-section { 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        width: 111%;
-    }
-
-    #projects {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 1rem;
+        place-items: center;
     }
 
-    #projects-section .heading {
-        padding: 1rem 0;
-        line-height: 0; 
+    #projects-section h3 {
+        font-size: 1.2rem;
     }
 
-    .heading h2 {
-        font-size: 18px;
+    #projects-section #projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 0.6rem;
+    }
+
+    section .project img {
+        min-height: 44vh;
+    }
+
+    main #contact-section {
+        gap: 2rem;
+    }
+    
+    #contact-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    #contact-section .social-links {
+        display: grid;  
+        gap: 1.4rem;
+    }
+    
+    .social-links a {
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    header .page-title {  
+        font-size: 1.5rem;
+    }
+
+    header #navbar {
+        gap: 0.3rem;
+    }
+
+    #welcome-section .my-img {
+        width: 210px;
+        height: 210px;
+    }
+
+    #welcome-section h1 {
+        font-size: 1.6rem;
+    }
+
+    #projects-section h3 {
+        font-size: 1.1rem;
+    }
+
+    #contact-section h2 {
+        font-size: 1.6rem;
     }
 }
