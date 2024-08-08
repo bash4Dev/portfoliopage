@@ -34,30 +34,27 @@ header {
     background: var(--header-bg);
     position: fixed;
     z-index: 1;
-    padding: 0.8rem;
+    padding: 0.8rem 1.5rem;
 }
 
 header .page-title { 
     font-family: var(--header-font);  
     font-size: 2rem;
     font-style: italic;
-    margin-left: 2rem;
 }
 
-header ul {
+header #navbar {
     display: flex;
-    list-style: none;
+    gap: 1rem;
 }
 
-header ul a {
+header #navbar a {
     text-decoration: none;
     font-size: 16px;
-    font-weight: 600;
-    margin-right: 2rem;
+    font-weight: 100;
     letter-spacing: 0.1rem;
     color: var(--white-color);
     cursor: pointer;
-    transition: .3s;
 }
 
 main #welcome-section {
@@ -106,10 +103,16 @@ main #welcome-section {
 
 main #projects-section { 
     display: grid;
+    place-items: center;
+    width: 100%;
+    background: var(--header-bg);
+    padding: 0rem 2rem 3rem 1rem;
+}
+
+#projects-section #projects {
+    display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 1.6rem;
-    background: var(--header-bg);
-    padding: 1.3rem 3rem 5rem 2rem;
 }
 
 #projects-section .project {
@@ -118,7 +121,8 @@ main #projects-section {
 
 #projects-section .heading {
     grid-column: 2 / -1;
-    line-height: 3rem; 
+    line-height: 3rem;
+    padding: 1rem 0;
 }
 
 section .project img {
@@ -148,7 +152,6 @@ section .project img {
 #projects-section .project .project-title {
     background-color: var(--body-color);
     color: var(--white-color);
-    /* font-weight: bold; */
     font-size: 18px;
 }
 
@@ -258,5 +261,74 @@ footer {
     
     #projects-section h2 {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        padding: 0;
+    }
+
+    header .page-title {  
+        font-size: 1.7rem;
+        margin-left: 0;
+    }
+
+    #navbar ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    header ul a {
+        margin-right: 0;
+    }
+
+    header ul li {
+        font-size: 13px;
+        font-weight: 100;
+        padding-right: 0;
+    }
+
+    main #welcome-section {
+        flex-direction: column;
+    }
+
+    #welcome-section .my-img {
+        width: 230px;
+        height: 230px;
+    }
+
+    #welcome-section h1 {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    #welcome-section p, #contact-section p {
+        font-size: 1.2rem;
+    }
+
+    main #projects-section { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 111%;
+    }
+
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1rem;
+    }
+
+    #projects-section .heading {
+        padding: 1rem 0;
+        line-height: 0; 
+    }
+
+    .heading h2 {
+        font-size: 18px;
     }
 }
