@@ -5,6 +5,7 @@
         rgb(199, 3, 68) 0%,
         rgb(199, 16, 101) 90%
     );
+    --span-color: #c71065;
     --white-color: rgb(100%, 100%, 100%);
     --header-font: "Libre Baskerville", serif;
     --texts-font: "Quicksand", sans-serif;
@@ -55,6 +56,11 @@ header #navbar a {
     cursor: pointer;
 }
 
+#navbar a:hover {
+    border-bottom: 2px solid #fff;
+    padding: 2px;
+}
+
 main #welcome-section {
     width: 100%;
     height: 100vh;
@@ -93,7 +99,7 @@ main #welcome-section {
 }
 
 #welcome-section p, #contact-section p {
-    color: rgb(199, 16, 101);
+    color: var(--span-color);
     font-size: 1.3rem;
     font-family: var(--texts-font);
     text-align: center;
@@ -175,12 +181,16 @@ main #contact-section {
     text-decoration: none;
 }
 
+.social-links a:hover {
+    color: var(--span-color);
+}
+
 svg {
     margin-right: 0.5rem;
 }
 
 .border {
-    border: 1px solid rgb(199, 16, 101);
+    border: 1px solid var(--span-color);
 }
 
 footer {
