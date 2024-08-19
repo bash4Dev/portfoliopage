@@ -20,7 +20,7 @@
 
 body {
     background-color: var(--body-color);
-    font-weight: 100;
+    font-weight: 400;
     overflow-x: hidden;
     color: var(--white-color);
     font-family: var(--texts-font);
@@ -49,16 +49,29 @@ header #navbar {
 }
 
 header #navbar a {
+    position: relative;
+    display: inline-block;
+    padding: 3px 0;
     text-decoration: none;
     font-size: 16px;
-    letter-spacing: 0.1rem;
     color: var(--white-color);
     cursor: pointer;
 }
 
-#navbar a:hover {
-    border-bottom: 2px solid #fff;
-    padding: 2px;
+#navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+#navbar a:hover::after {
+    width: 50%;
 }
 
 main #welcome-section {
@@ -94,6 +107,7 @@ main #welcome-section {
 
 #welcome-section h1 {
     font-size: 2.5rem;
+    font-weight: 100;
     letter-spacing: 0.1rem;
     font-family: var(--header-font);
 }
@@ -157,8 +171,9 @@ main #contact-section {
 }
 
 #contact-section h2 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.1rem;
+    font-weight: 100;
     font-family: var(--header-font);
     text-align: center;
     margin-bottom: 5px;
@@ -277,7 +292,14 @@ footer {
     
     header #navbar a {
         font-size: 14px;
-        letter-spacing: 0rem;
+    }
+
+    #navbar a::after {
+        position: unset;
+    }
+
+    #navbar a:active::after {
+        position: absolute;
     }
 
     main #welcome-section {
@@ -329,11 +351,15 @@ footer {
 
 @media (max-width: 320px) {
     header .page-title {  
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     header #navbar {
         gap: 0.3rem;
+    }
+
+    header #navbar a {
+        font-size: 13px;
     }
 
     #welcome-section .my-img {
@@ -342,7 +368,7 @@ footer {
     }
 
     #welcome-section h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     #projects-section h3 {
@@ -350,6 +376,6 @@ footer {
     }
 
     #contact-section h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
