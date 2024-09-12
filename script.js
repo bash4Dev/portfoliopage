@@ -14,7 +14,7 @@ document.getElementById('resume-link').addEventListener('click', (e) => {
 const projects = [
     {
         image: "./images/desktop-design.png",
-        title: "Testimonials",
+        title: "Survey Form",
         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
         link: "https://bash4dev.github.io/survey-form/",
     },
