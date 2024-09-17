@@ -20,13 +20,13 @@ const projects = [
     },
     {
         image: "./images/calculator.png",
-        title: "Calculator",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+        title: "Calculator App",
+        description: "A simple calculator app using CSS, Bootstrap, JS and JQuery for basic arithmetic operations with a clean, responsive design.",
         link: "https://bash4dev.github.io/simple-Calculator/",
     },
     {
         image: "./images/rewards-summary.png",
-        title: "Rewards Summary",
+        title: "Reward Summary",
         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
         link: "https://bash4dev.github.io/rewards-page/",
     },
