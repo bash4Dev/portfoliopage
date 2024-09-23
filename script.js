@@ -21,7 +21,7 @@ const projects = [
     {
         image: "./images/calculator.png",
         title: "Calculator App",
-        description: "A simple calculator app using CSS, Bootstrap, JS and JQuery for basic arithmetic operations with a clean, responsive design.",
+        description: "A simple calculator app using CSS, Bootstrap and JS for basic arithmetic operations with a clean, responsive design.",
         link: "https://bash4dev.github.io/simple-Calculator/",
     },
     {
